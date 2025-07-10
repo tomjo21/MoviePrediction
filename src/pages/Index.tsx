@@ -5,7 +5,7 @@ import { PredictionResult } from '@/components/PredictionResult';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Film, Sparkles, TrendingUp } from 'lucide-react';
+import { Film, Sparkles, TrendingUp, Camera, Clapperboard, Award } from 'lucide-react';
 
 export interface MovieData {
   title: string;
@@ -95,20 +95,67 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
-        }}
-      />
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Movie Background */}
+      <div className="fixed inset-0 z-0">
+        {/* Film Strip Animation */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 opacity-20">
+          <div className="w-full h-full bg-repeat-x animate-pulse" style={{
+            backgroundImage: 'repeating-linear-gradient(90deg, transparent 0px, transparent 10px, rgba(0,0,0,0.3) 10px, rgba(0,0,0,0.3) 20px)'
+          }} />
+        </div>
+        
+        {/* Floating Film Elements */}
+        <div className="absolute inset-0">
+          {/* Film Reel 1 */}
+          <div className="absolute top-20 left-10 opacity-10 animate-spin" style={{ animationDuration: '20s' }}>
+            <Film className="w-24 h-24 text-yellow-400" />
+          </div>
+          
+          {/* Camera */}
+          <div className="absolute top-40 right-20 opacity-15 animate-bounce" style={{ animationDuration: '4s' }}>
+            <Camera className="w-16 h-16 text-blue-400" />
+          </div>
+          
+          {/* Clapperboard */}
+          <div className="absolute bottom-32 left-20 opacity-10 animate-pulse" style={{ animationDuration: '3s' }}>
+            <Clapperboard className="w-20 h-20 text-red-400" />
+          </div>
+          
+          {/* Award */}
+          <div className="absolute bottom-20 right-32 opacity-15 animate-bounce" style={{ animationDuration: '5s', animationDelay: '1s' }}>
+            <Award className="w-14 h-14 text-golden-400" />
+          </div>
+          
+          {/* Film Reel 2 */}
+          <div className="absolute top-60 right-10 opacity-10 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}>
+            <Film className="w-18 h-18 text-purple-400" />
+          </div>
+          
+          {/* Small floating dots representing film perforations */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full opacity-20 animate-ping" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full opacity-30 animate-ping" style={{ animationDelay: '4s' }} />
+          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-red-400 rounded-full opacity-25 animate-ping" style={{ animationDelay: '6s' }} />
+          
+          {/* Spotlight effects */}
+          <div className="absolute top-0 left-1/4 w-32 h-32 bg-yellow-400 rounded-full opacity-5 blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+          <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-blue-400 rounded-full opacity-5 blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+        </div>
+        
+        {/* Moving film strip at bottom */}
+        <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 opacity-15">
+          <div className="w-full h-full animate-pulse" style={{
+            backgroundImage: 'repeating-linear-gradient(90deg, transparent 0px, transparent 15px, rgba(0,0,0,0.4) 15px, rgba(0,0,0,0.4) 30px)',
+            animation: 'scroll 15s linear infinite'
+          }} />
+        </div>
+      </div>
       
-      {/* Dark Overlay */}
-      <div className="fixed inset-0 z-10 bg-black/70 backdrop-blur-sm" />
+      {/* Dark Overlay for readability */}
+      <div className="fixed inset-0 z-10 bg-black/60 backdrop-blur-[1px]" />
       
-      {/* Gradient Overlay for depth */}
-      <div className="fixed inset-0 z-20 bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-black/40" />
+      {/* Subtle gradient overlay for depth */}
+      <div className="fixed inset-0 z-20 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-black/30" />
       
       {/* Content */}
       <div className="relative z-30 container mx-auto px-4 py-8">
@@ -189,11 +236,6 @@ const Index = () => {
           </div>
         )}
       </div>
-      
-      {/* Floating elements for extra visual appeal */}
-      <div className="fixed top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse" />
-      <div className="fixed bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="fixed top-1/2 left-1/4 w-20 h-20 bg-pink-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
   );
 };
