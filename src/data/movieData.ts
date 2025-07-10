@@ -1,0 +1,137 @@
+
+import { MovieData } from '@/pages/Index';
+
+export const sampleMovies: MovieData[] = [
+  {
+    title: "The Quantum Heist",
+    genre: "Action",
+    director: "Christopher Nolan",
+    budget: 200000000,
+    cast: ["Leonardo DiCaprio", "Margot Robbie", "Tom Hardy", "Michael Caine"],
+    runtime: 148,
+    releaseMonth: "July",
+    sequel: false,
+    rating: "PG-13"
+  },
+  {
+    title: "Space Pirates: Revenge",
+    genre: "Adventure",
+    director: "Taika Waititi",
+    budget: 150000000,
+    cast: ["Chris Pratt", "Zoe Saldana", "Bradley Cooper", "Dave Bautista"],
+    runtime: 125,
+    releaseMonth: "May",
+    sequel: true,
+    rating: "PG-13"
+  },
+  {
+    title: "The Last Laugh",
+    genre: "Comedy",
+    director: "Jordan Peele",
+    budget: 25000000,
+    cast: ["Kevin Hart", "Tiffany Haddish", "Keegan-Michael Key", "Jordan Peele"],
+    runtime: 98,
+    releaseMonth: "March",
+    sequel: false,
+    rating: "R"
+  },
+  {
+    title: "Midnight in Paris: Redux",
+    genre: "Romance",
+    director: "Woody Allen",
+    budget: 15000000,
+    cast: ["Emma Stone", "Ryan Gosling", "Rachel McAdams", "Owen Wilson"],
+    runtime: 112,
+    releaseMonth: "February",
+    sequel: true,
+    rating: "PG-13"
+  },
+  {
+    title: "The Digital Phantom",
+    genre: "Thriller",
+    director: "Denis Villeneuve",
+    budget: 80000000,
+    cast: ["Jake Gyllenhaal", "Amy Adams", "Oscar Isaac", "Tilda Swinton"],
+    runtime: 135,
+    releaseMonth: "October",
+    sequel: false,
+    rating: "R"
+  },
+  {
+    title: "Kingdom of Shadows",
+    genre: "Fantasy",
+    director: "Guillermo del Toro",
+    budget: 120000000,
+    cast: ["Timothée Chalamet", "Saoirse Ronan", "Benedict Cumberbatch", "Tilda Swinton"],
+    runtime: 156,
+    releaseMonth: "December",
+    sequel: false,
+    rating: "PG-13"
+  },
+  {
+    title: "Robot Revolution 3",
+    genre: "Sci-Fi",
+    director: "James Cameron",
+    budget: 300000000,
+    cast: ["Chris Evans", "Scarlett Johansson", "Mark Ruffalo", "Robert Downey Jr."],
+    runtime: 162,
+    releaseMonth: "June",
+    sequel: true,
+    rating: "PG-13"
+  },
+  {
+    title: "The Silent House",
+    genre: "Horror",
+    director: "Ari Aster",
+    budget: 8000000,
+    cast: ["Lupita Nyong'o", "Winston Duke", "Elisabeth Moss", "Toni Collette"],
+    runtime: 102,
+    releaseMonth: "October",
+    sequel: false,
+    rating: "R"
+  },
+  {
+    title: "Family Matters",
+    genre: "Drama",
+    director: "Greta Gerwig",
+    budget: 35000000,
+    cast: ["Frances McDormand", "Laurie Metcalf", "Beanie Feldstein", "Lucas Hedges"],
+    runtime: 124,
+    releaseMonth: "November",
+    sequel: false,
+    rating: "R"
+  },
+  {
+    title: "Ocean's Fourteen",
+    genre: "Action",
+    director: "Steven Soderbergh",
+    budget: 85000000,
+    cast: ["Sandra Bullock", "Cate Blanchett", "Anne Hathaway", "Rihanna"],
+    runtime: 118,
+    releaseMonth: "August",
+    sequel: true,
+    rating: "PG-13"
+  },
+  {
+    title: "The Time Travelers",
+    genre: "Sci-Fi",
+    director: "The Wachowskis",
+    budget: 175000000,
+    cast: ["Keanu Reeves", "Carrie-Anne Moss", "Yahya Abdul-Mateen II", "Neil Patrick Harris"],
+    runtime: 148,
+    releaseMonth: "March",
+    sequel: false,
+    rating: "R"
+  },
+  {
+    title: "Cartoon Kingdom",
+    genre: "Animation",
+    director: "Pete Docter",
+    budget: 200000000,
+    cast: ["Tom Hanks", "Tim Allen", "Annie Potts", "Tony Hale"],
+    runtime: 105,
+    releaseMonth: "June",
+    sequel: false,
+    rating: "G"
+  }
+];
