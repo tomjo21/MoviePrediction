@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MovieSearch } from '@/components/MovieSearch';
 import { MovieForm } from '@/components/MovieForm';
@@ -96,43 +95,43 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="p-3 bg-purple-600 rounded-full">
-              <Film className="w-8 h-8 text-white" />
+            <div className="p-3 bg-muted rounded-full">
+              <Film className="w-8 h-8 text-muted-foreground" />
             </div>
-            <h1 className="text-4xl font-bold text-white">Movie Success Predictor</h1>
-            <div className="p-3 bg-purple-600 rounded-full">
-              <Sparkles className="w-8 h-8 text-white" />
+            <h1 className="text-4xl font-bold text-foreground">Movie Success Predictor</h1>
+            <div className="p-3 bg-muted rounded-full">
+              <Sparkles className="w-8 h-8 text-muted-foreground" />
             </div>
           </div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Predict the box office success of any movie using advanced analytics. 
             Search our database or enter new movie details for instant predictions.
           </p>
         </div>
 
         {!prediction ? (
-          <Card className="max-w-4xl mx-auto bg-slate-800/50 border-slate-700 backdrop-blur-sm">
+          <Card className="max-w-4xl mx-auto bg-card border border-border">
             <CardHeader>
-              <CardTitle className="text-2xl text-white flex items-center gap-2">
-                <TrendingUp className="w-6 h-6 text-purple-400" />
+              <CardTitle className="text-2xl text-card-foreground flex items-center gap-2">
+                <TrendingUp className="w-6 h-6 text-muted-foreground" />
                 Get Your Prediction
               </CardTitle>
-              <CardDescription className="text-gray-400">
+              <CardDescription className="text-muted-foreground">
                 Choose how you'd like to analyze your movie
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <TabsList className="grid w-full grid-cols-2 bg-slate-700">
-                  <TabsTrigger value="search" className="data-[state=active]:bg-purple-600">
+                <TabsList className="grid w-full grid-cols-2 bg-muted">
+                  <TabsTrigger value="search">
                     Search Existing Movies
                   </TabsTrigger>
-                  <TabsTrigger value="new" className="data-[state=active]:bg-purple-600">
+                  <TabsTrigger value="new">
                     Enter New Movie
                   </TabsTrigger>
                 </TabsList>
@@ -157,7 +156,7 @@ const Index = () => {
               <Button 
                 onClick={resetPrediction}
                 variant="outline"
-                className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700"
+                className="bg-background border-border text-foreground hover:bg-muted"
               >
                 Make Another Prediction
               </Button>
