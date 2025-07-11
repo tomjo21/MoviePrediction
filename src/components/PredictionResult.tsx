@@ -41,7 +41,7 @@ export const PredictionResult = ({ movie, prediction }: PredictionResultProps) =
                 <TrendingDown className="w-8 h-8 text-red-400" />
               )}
               <CardTitle className="text-3xl text-white">
-                {prediction.success ? 'SUCCESS' : 'FLOP'}
+                {prediction.success ? 'HIT' : 'FLOP'}
               </CardTitle>
               {prediction.success ? (
                 <TrendingUp className="w-8 h-8 text-green-400" />

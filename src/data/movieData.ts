@@ -11,7 +11,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 148,
     releaseMonth: "July",
     sequel: false,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "Warner Bros., Legendary Pictures",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 8.2,
+    ratingsCount: 50000
   },
   {
     title: "Space Pirates: Revenge",
@@ -22,7 +27,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 125,
     releaseMonth: "May",
     sequel: true,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "Marvel Studios, Disney",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.8,
+    ratingsCount: 75000
   },
   {
     title: "The Last Laugh",
@@ -33,7 +43,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 98,
     releaseMonth: "March",
     sequel: false,
-    rating: "R"
+    rating: "R",
+    productionCompanies: "Universal Pictures",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 6.9,
+    ratingsCount: 25000
   },
   {
     title: "Midnight in Paris: Redux",
@@ -44,7 +59,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 112,
     releaseMonth: "February",
     sequel: true,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "Sony Pictures Classics",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.2,
+    ratingsCount: 15000
   },
   {
     title: "The Digital Phantom",
@@ -55,7 +75,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 135,
     releaseMonth: "October",
     sequel: false,
-    rating: "R"
+    rating: "R",
+    productionCompanies: "Warner Bros.",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.5,
+    ratingsCount: 35000
   },
   {
     title: "Kingdom of Shadows",
@@ -66,7 +91,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 156,
     releaseMonth: "December",
     sequel: false,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "Searchlight Pictures",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 8.1,
+    ratingsCount: 45000
   },
   {
     title: "Robot Revolution 3",
@@ -77,7 +107,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 162,
     releaseMonth: "June",
     sequel: true,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "20th Century Studios",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.9,
+    ratingsCount: 95000
   },
   {
     title: "The Silent House",
@@ -88,7 +123,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 102,
     releaseMonth: "October",
     sequel: false,
-    rating: "R"
+    rating: "R",
+    productionCompanies: "A24",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.3,
+    ratingsCount: 28000
   },
   {
     title: "Family Matters",
@@ -99,7 +139,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 124,
     releaseMonth: "November",
     sequel: false,
-    rating: "R"
+    rating: "R",
+    productionCompanies: "Focus Features",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.7,
+    ratingsCount: 32000
   },
   {
     title: "Ocean's Fourteen",
@@ -110,7 +155,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 118,
     releaseMonth: "August",
     sequel: true,
-    rating: "PG-13"
+    rating: "PG-13",
+    productionCompanies: "Warner Bros.",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.4,
+    ratingsCount: 55000
   },
   {
     title: "The Time Travelers",
@@ -121,7 +171,12 @@ export const sampleMovies: MovieData[] = [
     runtime: 148,
     releaseMonth: "March",
     sequel: false,
-    rating: "R"
+    rating: "R",
+    productionCompanies: "Warner Bros.",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 7.6,
+    ratingsCount: 68000
   },
   {
     title: "Cartoon Kingdom",
@@ -132,6 +187,11 @@ export const sampleMovies: MovieData[] = [
     runtime: 105,
     releaseMonth: "June",
     sequel: false,
-    rating: "G"
+    rating: "G",
+    productionCompanies: "Pixar Animation Studios",
+    originalLanguage: "en",
+    releaseYear: 2024,
+    avgRating: 8.3,
+    ratingsCount: 42000
   }
 ];

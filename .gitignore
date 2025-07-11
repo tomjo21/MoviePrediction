@@ -1,24 +1,57 @@
-# Logs
-logs
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# React/Vite
+src/dist/
+frontend/dist/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# System
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# Docker
+*.pid
+*.sock
+
+# Test/coverage
+coverage/
+*.cover
+*.py,cover
+
+# Misc
+*.bak
+*.tmp
+*.old
+
+# Render/Deployment
+.render.yaml
+
+# Ignore local data
+*.sqlite3
+*.db
+
+# Ignore package lock files (optional, if you want to force fresh installs)
+# package-lock.json
+# yarn.lock

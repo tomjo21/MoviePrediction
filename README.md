@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# Movie Success Prediction System
 
-## Project info
+A full-stack web application that predicts movie box office success using machine learning.
 
-**URL**: https://lovable.dev/projects/17a71991-cdde-4132-bf8f-961df356c1d8
+## Features
 
-## How can I edit this code?
+- **Advanced ML Predictions**: Uses trained machine learning models to predict movie success
+- **Comprehensive Input**: Collects detailed movie information including cast, crew, budget, and more
+- **Real-time Analysis**: Provides instant predictions with confidence scores
+- **Beautiful UI**: Modern, responsive interface built with React and Tailwind CSS
+- **Backend API**: Flask-based REST API with CORS support
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React, TypeScript, Tailwind CSS, Shadcn/ui
+- **Backend**: Flask, Python, scikit-learn
+- **ML**: Pre-trained models with director/actor success rate analysis
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/17a71991-cdde-4132-bf8f-961df356c1d8) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ and npm
+- Python 3.8+ and pip
+- Your trained ML model (`saved_model.pkl`)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd movie-success-predictor
+   ```
 
-Follow these steps:
+2. **Install frontend dependencies**
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Install backend dependencies**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Add your ML model**
+   - Place your `saved_model.pkl` file in the `backend/` directory
+   - The model should contain: `pipeline`, `director_success_rates`, `actor_success_rates`
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Running the Application
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. **Start the Flask backend**
+   ```bash
+   cd backend
+   python app.py
+   ```
+   The backend will run on `http://localhost:5000`
+
+2. **Start the React frontend**
+   ```bash
+   npm run dev
+   ```
+   The frontend will run on `http://localhost:8080`
+
+3. **Open your browser** and navigate to `http://localhost:8080`
+
+## API Endpoints
+
+- `GET /health` - Health check
+- `GET /model-info` - Model information
+- `POST /predict` - Movie success prediction
+
+## Usage
+
+1. **Enter Movie Details**: Fill out the comprehensive form with movie information
+2. **Get Prediction**: Submit to receive instant HIT/FLOP prediction with confidence score
+3. **View Analysis**: See detailed breakdown of factors influencing the prediction
+
+## Deployment
+
+### Frontend Deployment
+```bash
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+### Backend Deployment
+The Flask app can be deployed using:
+- Heroku
+- Railway
+- Render
+- AWS/GCP/Azure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contributing
 
-**Use GitHub Codespaces**
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/17a71991-cdde-4132-bf8f-961df356c1d8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License.

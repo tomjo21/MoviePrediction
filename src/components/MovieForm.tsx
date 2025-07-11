@@ -24,6 +24,11 @@ export const MovieForm = ({ onSubmit }: MovieFormProps) => {
     runtime: 0,
     releaseMonth: '',
     sequel: false,
+    productionCompanies: 'Independent',
+    originalLanguage: 'en',
+    releaseYear: new Date().getFullYear(),
+    avgRating: 7.0,
+    ratingsCount: 1000,
   });
   const [newCastMember, setNewCastMember] = useState('');
 
@@ -199,6 +204,79 @@ export const MovieForm = ({ onSubmit }: MovieFormProps) => {
                 ))}
               </div>
             )}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="productionCompanies" className="text-white">Production Companies</Label>
+              <Input
+                id="productionCompanies"
+                value={formData.productionCompanies}
+                onChange={(e) => setFormData(prev => ({ ...prev, productionCompanies: e.target.value }))}
+                placeholder="e.g., Warner Bros., Universal Pictures"
+                className="bg-slate-600 border-slate-500 text-white placeholder:text-gray-400"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="originalLanguage" className="text-white">Original Language</Label>
+              <Select value={formData.originalLanguage} onValueChange={(value) => setFormData(prev => ({ ...prev, originalLanguage: value }))}>
+                <SelectTrigger className="bg-slate-600 border-slate-500 text-white">
+                  <SelectValue placeholder="Select language" />
+                </SelectTrigger>
+                <SelectContent className="bg-slate-700 border-slate-600">
+                  <SelectItem value="en" className="text-white hover:bg-slate-600">English</SelectItem>
+                  <SelectItem value="es" className="text-white hover:bg-slate-600">Spanish</SelectItem>
+                  <SelectItem value="fr" className="text-white hover:bg-slate-600">French</SelectItem>
+                  <SelectItem value="de" className="text-white hover:bg-slate-600">German</SelectItem>
+                  <SelectItem value="it" className="text-white hover:bg-slate-600">Italian</SelectItem>
+                  <SelectItem value="ja" className="text-white hover:bg-slate-600">Japanese</SelectItem>
+                  <SelectItem value="ko" className="text-white hover:bg-slate-600">Korean</SelectItem>
+                  <SelectItem value="zh" className="text-white hover:bg-slate-600">Chinese</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="releaseYear" className="text-white">Release Year</Label>
+              <Input
+                id="releaseYear"
+                type="number"
+                value={formData.releaseYear || ''}
+                onChange={(e) => setFormData(prev => ({ ...prev, releaseYear: parseInt(e.target.value) || new Date().getFullYear() }))}
+                placeholder="e.g., 2024"
+                className="bg-slate-600 border-slate-500 text-white placeholder:text-gray-400"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="avgRating" className="text-white">Average Rating (0-10)</Label>
+              <Input
+                id="avgRating"
+                type="number"
+                step="0.1"
+                min="0"
+                max="10"
+                value={formData.avgRating || ''}
+                onChange={(e) => setFormData(prev => ({ ...prev, avgRating: parseFloat(e.target.value) || 7.0 }))}
+                placeholder="e.g., 7.5"
+                className="bg-slate-600 border-slate-500 text-white placeholder:text-gray-400"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="ratingsCount" className="text-white">Number of Ratings</Label>
+            <Input
+              id="ratingsCount"
+              type="number"
+              value={formData.ratingsCount || ''}
+              onChange={(e) => setFormData(prev => ({ ...prev, ratingsCount: parseInt(e.target.value) || 1000 }))}
+              placeholder="e.g., 10000"
+              className="bg-slate-600 border-slate-500 text-white placeholder:text-gray-400"
+            />
           </div>
 
           <div className="flex items-center space-x-2">
